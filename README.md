@@ -87,38 +87,6 @@ O Flask lê o cookie e aplica dinamicamente a classe no `<body>` para alterar o 
 
 ---
 
-# **Requisitos Técnicos Atendidos (do edital)**
-
-### Rotas e Funcionalidades — **OK**
-
-* `/`, `/adicionar_noticia` e `/configuracoes`
-* Manipulação correta de POST e GET
-* redirecionamentos e flash funcionando
-
-### Templates + Bootstrap — **OK**
-
-* Uso de Bootstrap CDN
-* Templates estruturados e responsivos
-* Cards, formulários, navbar e footer estilizados
-
-### Formulários e Validação — **OK**
-
-* Campos obrigatórios
-* Verificação no backend
-* Mensagens flash com alerts Bootstrap
-
-### Cookies e Personalização — **OK**
-
-* Tema salvo em cookie
-* Tema aplicado dinamicamente em todo o site
-
-### Organização e Documentação — **OK**
-
-* Código limpo
-* Este README incluso na entrega
-
----
-
 # **Como Executar o Projeto**
 
 ### 1. Requisitos
@@ -168,16 +136,5 @@ http://127.0.0.1:5000/
 └── /static
       └── estilo.css
 ```
-
----
-
-# **Recursos Extras**
-
-Itens opcionais que podem melhorar a avaliação:
-
-* Animação suave na troca de temas
-* Badges coloridos por categoria
-* Cards com efeitos de hover
-* Uso de modal, collapse ou carousel do Bootstrap
 
 ---
