@@ -1,0 +1,196 @@
+:root {
+    --bg-body-light: #dadada;
+    --bg-body-dark: #121212;
+    --text-white: #fff;
+    --text-black: #000;
+    --navbar-bg: #2fb6b1;
+    --footer-bg: #2b5876;
+    --card-bg-light: #fafafa;
+    --card-bg-dark: #1d1d1d;
+    --btn-salvar-bg: #4ee955;
+    --btn-salvar-hover: #36af3c;
+    --btn-voltar-bg: #df3d3d;
+    --btn-voltar-hover: #be2c2c;
+    --btn-preview-light: #eeeeee;
+    --btn-preview-dark: #353535;
+    --form-bg-light: #ffffff;
+    --form-bg-dark: #2a2a2a;
+    --form-dark-border: #555;
+}
+
+/* =====================
+    TEMA CLARO (PADRÃO) 
+========================*/
+body {
+    background-color: var(--bg-body-light);
+    color: var(--text-black);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 140px;
+}
+
+/* NAVBAR */
+.fw-bold {
+    color: var(--text-white) !important;
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    color: var(--text-white) !important;
+}
+
+.navbar .nav-link {
+    color: var(--text-white) !important;
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: .8rem;
+    line-height: 1;
+}
+
+/* CARDS */
+.card {
+    background-color: var(--card-bg-light);
+    color: var(--card-text);
+    border: none;
+    border-radius: .5rem;
+}
+
+/* FORMULÁRIOS */
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    background-color: var(--bg-body-light);
+    color: var(--text-black);
+}
+
+/* BOTÕES */
+.btn-primary {
+    background-color: var(--btn-salvar-bg) !important;
+    color: var(--text-black) !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-salvar-hover) !important;
+    color: var(--text-black) !important;
+}
+
+.btn-secondary {
+    background-color: var(--btn-voltar-bg) !important;
+    color: var(--text-black) !important;
+    border: none !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-voltar-hover) !important;
+    color: var(--text-black) !important;
+}
+
+.btn {
+    font-weight: 600;
+    transition: transform .12s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-outline-light {
+    background-color: var(--btn-preview-light);
+    color: var(--text-black);
+}
+
+.btn-outline-dark {
+    background-color: var(--btn-preview-dark);
+    color: var(--text-white);
+}
+
+/* ALERTAS */
+.alert {
+    margin-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-white);
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+footer small {
+    opacity: .9;
+}
+
+/* ================
+    TEMA ESCURO 
+===================*/
+body.tema-escuro {
+    background-color: var(--bg-body-dark) !important;
+    color: var(--text-white) !important;
+}
+
+/* NAVBAR */
+body.tema-escuro .navbar {
+    background-color: var(--navbar-bg) !important;
+    color: var(--text-white) !important;
+}
+
+body.tema-escuro .navbar .nav-link {
+    color: var(--text-white) !important;
+}
+
+body.tema-escuro .navbar-brand small {
+    display: block;
+    font-size: .8rem;
+    line-height: 1;
+}
+
+/* CARDS */
+body.tema-escuro .card {
+    background-color: var(--card-bg-dark) !important;
+    color: var(--text-white) !important;
+}
+
+body.tema-escuro .card small{
+    color: var(--text-white) !important;
+}
+
+/* FORMULÁRIOS */
+body.tema-escuro .form-control,
+body.tema-escuro .form-select {
+    background-color: var(--form-bg-dark) !important;
+    color: var(--text-white) !important;
+    border-color: var(--form-dark-border) !important;
+}
+
+/* FOOTER */
+body.tema-escuro footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text) !important;
+}
+
+body.tema-escuro footer small {
+    opacity: .8;
+}
+
+/* AJUSTES E RESPONSIVIDADE */
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+@media(max-width: 768px) {
+    .navbar-brand small {
+        display: none !important;
+    }
+}

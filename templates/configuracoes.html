@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Configurações{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">Configurações</h2>
+
+<form method="POST" action="{{ url_for('configuracoes') }}">
+    <div class="mb-3">
+        <label class="form-label">Tema</label>
+        <div class="btn-group p-1" role="group" aria-label="Tema">
+            <input type="radio" class="btn-check" name="tema" id="temaClaro" value="claro" autocomplete="off" {% if
+                tema=='claro' %}checked{% endif %}>
+            <label class="btn btn-outline-light" for="temaClaro">Tema Claro</label>
+
+            <input type="radio" class="btn-check" name="tema" id="temaEscuro" value="escuro" autocomplete="off" {% if
+                tema=='escuro' %}checked{% endif %}>
+            <label class="btn btn-outline-dark" for="temaEscuro">Tema Escuro</label>
+        </div>
+    </div>
+</form>
+
+<div class="mt-4">
+    <h6>Preview:</h6>
+    <div class="p-3 border rounded mb-2" id="previewBox">Caixa de preview do tema</div>
+</div>
+
+<div class="mb-4">
+    <small class="text-muted">A preferência é salva em cookie e será aplicada em todas as páginas.</small>
+</div>
+
+
+<button type="submit" class="btn btn-primary">Salvar</button>
+<a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Voltar</a>
+
+
+<script>
+    const radioClaro = document.getElementById('temaClaro');
+    const radioEscuro = document.getElementById('temaEscuro');
+    const preview = document.getElementById('previewBox');
+
+    function updatePreview() {
+        if (radioEscuro.checked) {
+            preview.style.background = '#1e1e1e';
+            preview.style.color = '#f8f9fa';
+        } else {
+            preview.style.background = '#fff';
+            preview.style.color = '#212529';
+        }
+    }
+    updatePreview();
+    radioClaro.addEventListener('change', updatePreview);
+    radioEscuro.addEventListener('change', updatePreview);
+</script>
+{% endblock %}

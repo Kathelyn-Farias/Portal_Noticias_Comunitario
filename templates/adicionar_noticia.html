@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Adicionar Notícia{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">Adicionar nova notícia</h2>
+
+<form method="POST" action="{{ url_for('adicionar_noticia') }}" novalidate>
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input id="titulo" name="titulo" type="text" maxlength="100" value="{{ request.form.get('titulo','') }}"
+            required class="form-control {% if 'Título' in get_flashed_messages() %}is-invalid{% endif %}">
+        <div class="invalid-feedback">Título é obrigatório (máx. 100 caracteres).</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="conteudo" class="form-label">Conteúdo</label>
+        <textarea id="conteudo" name="conteudo" rows="6" required
+            class="form-control">{{ request.form.get('conteudo','') }}</textarea>
+        <div class="invalid-feedback">Conteúdo é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="autor" class="form-label">Autor</label>
+        <input id="autor" name="autor" type="text" value="{{ request.form.get('autor','') }}" required
+            class="form-control">
+        <div class="invalid-feedback">Autor é obrigatório.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="categoria" class="form-label">Categoria</label>
+        <select id="categoria" name="categoria" required class="form-select">
+            <option value="">Selecione...</option>
+            <option value="Política" {% if request.form.get('categoria')=='Política' %}selected{% endif %}>Política
+            </option>
+            <option value="Esportes" {% if request.form.get('categoria')=='Esportes' %}selected{% endif %}>Esportes
+            </option>
+            <option value="Cultura" {% if request.form.get('categoria')=='Cultura' %}selected{% endif %}>Cultura
+            </option>
+            <option value="Tecnologia" {% if request.form.get('categoria')=='Tecnologia' %}selected{% endif %}>Tecnologia</option>
+        </select>
+        <div class="invalid-feedback">Selecione uma categoria.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar notícia</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Voltar</a>
+</form>
+
+<!-- Ativa validação visual do Bootstrap (client-side para UX) -->
+<script>
+    (function () {
+        'use strict'
+        const forms = document.querySelectorAll('form[novalidate]')
+        Array.from(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
+{% endblock %}
