@@ -87,7 +87,7 @@ O Flask lê o cookie e aplica dinamicamente a classe no `<body>` para alterar o 
 
 ---
 
-# 🛠 **Requisitos Técnicos Atendidos (do edital)**
+# **Requisitos Técnicos Atendidos (do edital)**
 
 ### Rotas e Funcionalidades — **OK**
 
