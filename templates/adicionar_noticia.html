@@ -4,7 +4,7 @@
 {% block content %}
 <h2 class="mb-3">Adicionar nova notícia</h2>
 
-<form method="POST" action="{{ url_for('adicionar_noticia') }}" novalidate>
+<form method="POST" action="{{ url_for('adicionar_noticia') }}" novalidate enctype="multipart/form-data">
     <div class="mb-3">
         <label for="titulo" class="form-label">Título</label>
         <input id="titulo" name="titulo" type="text" maxlength="100" value="{{ request.form.get('titulo','') }}"
@@ -37,13 +37,27 @@
             <option value="Cultura" {% if request.form.get('categoria')=='Cultura' %}selected{% endif %}>Cultura
             </option>
             <option value="Tecnologia" {% if request.form.get('categoria')=='Tecnologia' %}selected{% endif %}>Tecnologia</option>
+            <option value="Eventos" {% if request.form.get('categoria')=='Eventos' %}selected{% endif %}>Eventos</option>
         </select>
         <div class="invalid-feedback">Selecione uma categoria.</div>
+    </div>
+
+     <div class="mb-3">
+        <label for="banner" class="form-label">Banner da notícia</label>
+        <input
+            id="banner"
+            name="banner"
+            type="file"
+            accept="image/*"
+            class="form-control">
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar notícia</button>
     <a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Voltar</a>
 </form>
+
+
+
 
 <!-- Ativa validação visual do Bootstrap (client-side para UX) -->
 <script>

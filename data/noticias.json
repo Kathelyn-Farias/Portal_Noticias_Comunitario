@@ -1,0 +1,58 @@
+[
+    {
+        "titulo": "Festa de Natal Comunitária",
+        "conteudo": "O tradicional Natal Comunitário, feito  para as famílias e a alegria das crianças, será realizado na Praça Principal. Teremos brinquedos infláveis, distribuição de presentes, lanches e a presença ilustre do Papai Noel!",
+        "autor": "Mariana (Líder Comunitária)",
+        "categoria": "Eventos",
+        "data": "25/11/2025 23:03",
+        "banner": "20251125230311_natal.jpg"
+    },
+    {
+        "titulo": "A Revolução Digital Chega na Comunidade",
+        "conteudo": "O Centro Comunitário inaugura o programa &#34;Conecta Bairro&#34;, oferecendo oficinas gratuitas sobre o uso de smartphones, internet e segurança digital. O objetivo é reduzir a exclusão digital entre os moradores mais velhos e desempregados. Local: Sala de Multimídia do Centro Comunitário (Av. Beija-flor, Nº180).",
+        "autor": "Jorge",
+        "categoria": "Tecnologia",
+        "data": "25/11/2025 22:31",
+        "banner": "20251125223143_inclusao_digital.jpg"
+    },
+    {
+        "titulo": "Feira de Artesanato: Arte e Cultura em Destaque",
+        "conteudo": "Está abertas inscrições para a próxima edição da Feira de Artesanato. Artesãos e empreendedores criativos podem se inscrever para expor e comercializar seus trabalhos. A feira busca valorizar a produção local, com curadoria para garantir a qualidade das peças. Endereço: Praça principal.",
+        "autor": "Associação dos Artesãos Locais",
+        "categoria": "Cultura",
+        "data": "25/11/2025 22:24",
+        "banner": "20251125222446_feira_artesanato.jpg"
+    },
+    {
+        "titulo": "Novo Centro Comunitário - Inauguração",
+        "conteudo": "Inauguração do novo centro comunitário com espaço para cursos, eventos e atividades.\nEndereço: Av. Beija-flor, Nº 180",
+        "autor": "Jorge",
+        "categoria": "Cultura",
+        "data": "23/11/2025 12:56",
+        "banner": "centro_comunitario.webp"
+    },
+    {
+        "titulo": "Aberta inscrições para Escolinha de Futebol",
+        "conteudo": "Inscrições abertas para crianças entre 6 e 12 anos. Traga documento de identidade.",
+        "autor": "Cláudia",
+        "categoria": "Esportes",
+        "data": "23/11/2025 12:58",
+        "banner": "escolinha_de_futebol.jpg"
+    },
+    {
+        "titulo": "Mutirão de Vacinação contra a Gripe",
+        "conteudo": "O Posto de Saúde realizará um mutirão de vacinação neste sábado, das 8h às 16h, para facilitar o acesso à vacina contra a gripe. É obrigatória a apresentação do cartão de vacinação e documento de identidade.",
+        "autor": "Agente Comunitário de Saúde",
+        "categoria": "Eventos",
+        "data": "18/11/2025 15:47",
+        "banner": "multirao_vacina.jpg"
+    },
+    {
+        "titulo": "Reforço Escolar em Matemática e Português",
+        "conteudo": "Estão abertas as vagas para o curso gratuito de reforço escolar, focado em alunos do Ensino Fundamental II (6º ao 9º ano). As aulas serão ministradas por professores voluntários, visando auxiliar no preparo para as provas finais. Local: Sala de Leitura do Centro Comunitário (Av. Beija-flor, Nº180)",
+        "autor": "Jorge",
+        "categoria": "Cultura",
+        "data": "24/11/2025 15:02",
+        "banner": "reforco_escolar.jpg"
+    }
+]

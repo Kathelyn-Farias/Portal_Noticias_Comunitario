@@ -25,26 +25,25 @@
 </div>
 
 <div class="mb-4">
-    <small class="text-muted">A preferência é salva em cookie e será aplicada em todas as páginas.</small>
+    <small class="text">A preferência é salva em cookie e será aplicada em todas as páginas.</small>
 </div>
-
-
-<button type="submit" class="btn btn-primary">Salvar</button>
-<a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Voltar</a>
-
 
 <script>
     const radioClaro = document.getElementById('temaClaro');
     const radioEscuro = document.getElementById('temaEscuro');
     const preview = document.getElementById('previewBox');
+    const texto = document.getElementById('texto')
 
     function updatePreview() {
         if (radioEscuro.checked) {
             preview.style.background = '#1e1e1e';
             preview.style.color = '#f8f9fa';
+
         } else {
             preview.style.background = '#fff';
             preview.style.color = '#212529';
+
+
         }
     }
     updatePreview();

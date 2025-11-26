@@ -3,20 +3,45 @@
 
 {% block content %}
 <div class="mb-4">
-    <h2 class="mb-3">Últimas notícias</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
+        <h2 class="mb-2 mb-md-0">Últimas notícias</h2>
+
+        <div class="btn-group" role="group" aria-label="Filtrar por categoria">
+            <!-- Botão "Todas" -->
+            <a href="{{ url_for('index') }}"
+                class="btn btn-sm btn-filter {% if not categoria_atual %}active{% endif %}">
+                Todas
+            </a>
+
+            <!-- Um botão para cada categoria existente -->
+            {% for cat in categorias %}
+            <a href="{{ url_for('index', categoria=cat) }}"
+                class="btn btn-sm btn-filter {% if categoria_atual == cat %}active{% endif %}">
+                {{ cat }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
 
     <div class="row">
         {% for noticia in noticias %}
         <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <!-- imagem placeholder opcional -->
+            <!-- card clicável -->
+            <div class="card h-100 shadow-sm card-clickable" data-bs-toggle="modal"
+                data-bs-target="#modalNoticia{{ loop.index }}">
+
+                {% if noticia.banner %}
+                <img src="{{ url_for('static', filename='uploads/' ~ noticia.banner) }}"
+                    class="card-img-top noticia-banner" alt="Banner da notícia {{ noticia.titulo }}">
+                {% endif %}
+
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">{{ noticia.titulo }}</h5>
                     <p class="card-text mb-2">
                         {% if noticia.conteudo|length > 140 %}
-                        {{ noticia.conteudo[:140] }}...
+                        {{ noticia.conteudo[:140].replace('\n', '<br>') | safe }}...
                         {% else %}
-                        {{ noticia.conteudo }}
+                        {{ noticia.conteudo.replace('\n', '<br>') | safe }}
                         {% endif %}
                     </p>
 
@@ -26,15 +51,40 @@
                             <div>{{ noticia.data if noticia.data is defined else "" }}</div>
                         </div>
                         <span class="badge {{ 
-                            'bg-primary' if noticia.categoria == 'Política' else
-                            'bg-success' if noticia.categoria == 'Esportes' else
-                            'bg-warning text-dark' if noticia.categoria == 'Cultura' else
-                            'bg-info text-dark' if noticia.categoria == 'Tecnologia' else
-                            'bg-secondary'
-                        }}">{{ noticia.categoria }}</span>
+                    'bg-primary' if noticia.categoria == 'Política' else
+                    'bg-success' if noticia.categoria == 'Esportes' else
+                    'bg-warning text-dark' if noticia.categoria == 'Cultura' else
+                    'bg-info text-dark' if noticia.categoria == 'Tecnologia' else
+                    'bg-secondary'
+                }}">{{ noticia.categoria }}</span>
                     </div>
                 </div>
             </div>
+
+            {# MODAL PARA ESSA NOTÍCIA #}
+            <div class="modal fade" id="modalNoticia{{ loop.index }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ noticia.titulo }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            {% if noticia.banner %}
+                            <img src="{{ url_for('static', filename='uploads/' ~ noticia.banner) }}"
+                                class="img-fluid mb-3 rounded" alt="Banner da notícia {{ noticia.titulo }}">
+                            {% endif %}
+                            <p class="mb-3">{{ noticia.conteudo }}</p>
+                            <small class="text-muted">
+                                Por <strong>{{ noticia.autor }}</strong> • {{ noticia.data }}
+                                • {{ noticia.categoria }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         {% endfor %}
     </div>

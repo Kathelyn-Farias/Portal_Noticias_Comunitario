@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --bg-body-light: #dadada;
+    --bg-body-light: #f7f3f3;
     --bg-body-dark: #121212;
     --text-white: #fff;
     --text-black: #000;
@@ -24,7 +25,7 @@
 body {
     background-color: var(--bg-body-light);
     color: var(--text-black);
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     margin: 0;
     padding-bottom: 140px;
 }
@@ -41,6 +42,8 @@ body {
 
 .navbar .nav-link {
     color: var(--text-white) !important;
+    font-weight: 500;                 /* um pouco mais “cheio” ajuda muito */
+
 }
 
 .navbar-brand small {
@@ -55,6 +58,9 @@ body {
     color: var(--card-text);
     border: none;
     border-radius: .5rem;
+}
+.card-clickable {
+    cursor: pointer;
 }
 
 /* FORMULÁRIOS */
@@ -165,6 +171,32 @@ body.tema-escuro .card small{
     color: var(--text-white) !important;
 }
 
+body.tema-escuro .modal-content {
+    background-color: #000;   
+    color: var(--text-white); 
+    border-color: #333;
+}
+
+body.tema-escuro .modal-header,
+body.tema-escuro .modal-footer {
+    border-color: #333;
+}
+
+body.tema-escuro .modal-title,
+body.tema-escuro .modal-body p,
+body.tema-escuro .modal-body div,
+body.tema-escuro .modal-body small {
+    color: var(--text-white); 
+}
+
+body.tema-escuro .modal-body .text-muted {
+    color: #ffffff !important;
+}
+
+body.tema-escuro .btn-close {
+    filter: invert(1) grayscale(100%);
+}
+
 /* FORMULÁRIOS */
 body.tema-escuro .form-control,
 body.tema-escuro .form-select {
@@ -173,10 +205,15 @@ body.tema-escuro .form-select {
     border-color: var(--form-dark-border) !important;
 }
 
+/* CORRIGIDO: Adicionando estilo para o placeholder no tema escuro */
+body.tema-escuro .form-control::placeholder {
+    color: #999; /* Um cinza claro para ser visível no fundo escuro */
+    opacity: 1; /* Garante que a cor seja aplicada */
+}
 /* FOOTER */
 body.tema-escuro footer {
     background-color: var(--footer-bg) !important;
-    color: var(--footer-text) !important;
+    color: var(--text-white) !important;
 }
 
 body.tema-escuro footer small {
@@ -194,3 +231,39 @@ body.tema-escuro footer small {
         display: none !important;
     }
 }
+
+/* ================
+    BANNER
+===================*/
+.noticia-banner {
+    width: 100%;
+    height: 180px;      /* ajusta pro tamanho que você quiser */
+    object-fit: cover;  /* faz o crop bonito igual ao exemplo */
+}
+
+/* ================
+    FILTRO DE CATEGORIA
+===================*/
+.btn-group .btn-sm {
+    border-radius: 5px; /* pill */
+    padding-inline: 16px;
+}
+.btn-filter {
+    border-radius: 999px;
+    border: 1px solid #2fb6b1;        /* cor da borda */
+    background-color: transparent;    /* fundo normal */
+    color: #2fb6b1;                   /* texto normal */
+    font-weight: 500;
+    padding-inline: 14px;
+    padding-block: 4px;
+}
+
+.btn-filter.active {
+    background-color: #2fb6b1;   /* fundo quando selecionado */
+    color: #fff;
+    border-color: #2fb6b1;
+}
+
+
+
+
