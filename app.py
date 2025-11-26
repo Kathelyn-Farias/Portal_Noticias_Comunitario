@@ -20,6 +20,14 @@ def allowed_file(filename: str) -> bool:
 # Lista de notícias (simulação de banco de dados)
 DEFAULT_NOTICIAS = [
     {
+        "titulo": "Reforço Escolar em Matemática e Português",
+        "conteudo": "Estão abertas as vagas para o curso gratuito de reforço escolar, focado em alunos do Ensino Fundamental II (6º ao 9º ano). As aulas serão ministradas por professores voluntários, visando auxiliar no preparo para as provas finais. Local: Sala de Leitura do Centro Comunitário (Av. Beija-flor, Nº180)",
+        "autor": "Jorge",
+        "categoria": "Cultura",
+        "data": "24/11/2025 15:02",
+        "banner": "reforco_escolar.jpg"
+    },
+    {
         "titulo": "Novo Centro Comunitário - Inauguração",
         "conteudo": "Inauguração do novo centro comunitário com espaço para cursos, eventos e atividades.",
         "autor": "Jorge",
@@ -43,14 +51,6 @@ DEFAULT_NOTICIAS = [
         "data": "18/11/2025 15:47",
         "banner": "multirao_vacina.jpg"
     },
-    {
-        "titulo": "Reforço Escolar em Matemática e Português",
-        "conteudo": "Estão abertas as vagas para o curso gratuito de reforço escolar, focado em alunos do Ensino Fundamental II (6º ao 9º ano). As aulas serão ministradas por professores voluntários, visando auxiliar no preparo para as provas finais. Local: Sala de Leitura do Centro Comunitário (Av. Beija-flor, Nº180)",
-        "autor": "Jorge",
-        "categoria": "Cultura",
-        "data": "24/11/2025 15:02",
-        "banner": "reforco_escolar.jpg"
-    }
 
 ]
 

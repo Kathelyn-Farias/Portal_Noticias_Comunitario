@@ -9,7 +9,7 @@
     },
     {
         "titulo": "A Revolução Digital Chega na Comunidade",
-        "conteudo": "O Centro Comunitário inaugura o programa &#34;Conecta Bairro&#34;, oferecendo oficinas gratuitas sobre o uso de smartphones, internet e segurança digital. O objetivo é reduzir a exclusão digital entre os moradores mais velhos e desempregados. Local: Sala de Multimídia do Centro Comunitário (Av. Beija-flor, Nº180).",
+        "conteudo": "O Centro Comunitário inaugura o programa Conecta Bairro, oferecendo oficinas gratuitas sobre o uso de smartphones, internet e segurança digital. O objetivo é reduzir a exclusão digital entre os moradores mais velhos e desempregados. Local: Sala de Multimídia do Centro Comunitário (Av. Beija-flor, Nº180).",
         "autor": "Jorge",
         "categoria": "Tecnologia",
         "data": "25/11/2025 22:31",
@@ -22,6 +22,14 @@
         "categoria": "Cultura",
         "data": "25/11/2025 22:24",
         "banner": "20251125222446_feira_artesanato.jpg"
+    },
+    {
+        "titulo": "Reforço Escolar em Matemática e Português",
+        "conteudo": "Estão abertas as vagas para o curso gratuito de reforço escolar, focado em alunos do Ensino Fundamental II (6º ao 9º ano). As aulas serão ministradas por professores voluntários, visando auxiliar no preparo para as provas finais. Local: Sala de Leitura do Centro Comunitário (Av. Beija-flor, Nº180)",
+        "autor": "Jorge",
+        "categoria": "Cultura",
+        "data": "24/11/2025 15:02",
+        "banner": "reforco_escolar.jpg"
     },
     {
         "titulo": "Novo Centro Comunitário - Inauguração",
@@ -46,13 +54,5 @@
         "categoria": "Eventos",
         "data": "18/11/2025 15:47",
         "banner": "multirao_vacina.jpg"
-    },
-    {
-        "titulo": "Reforço Escolar em Matemática e Português",
-        "conteudo": "Estão abertas as vagas para o curso gratuito de reforço escolar, focado em alunos do Ensino Fundamental II (6º ao 9º ano). As aulas serão ministradas por professores voluntários, visando auxiliar no preparo para as provas finais. Local: Sala de Leitura do Centro Comunitário (Av. Beija-flor, Nº180)",
-        "autor": "Jorge",
-        "categoria": "Cultura",
-        "data": "24/11/2025 15:02",
-        "banner": "reforco_escolar.jpg"
     }
 ]
